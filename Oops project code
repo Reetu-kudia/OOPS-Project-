@@ -1,0 +1,195 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Student
+{ 
+    int roll;
+    string name;
+
+    public: 
+    void getdata()
+    { 
+        cout<<endl<<"Enter student roll number:";
+        cin>>roll;
+        cout<<endl<<"Enter student name:";
+        cin>>name;
+    }
+    void putdata()
+    { 
+        cout<<endl<<"The student roll number:"<<roll;
+        cout<<endl<<"The student name:"<<name;
+       
+    }
+};
+class FYIT:public Student
+{ 
+    int sub1;
+    int sub2;
+    int sub3;
+    float per;
+    public:
+    char fail;
+        void input()
+        { 
+            getdata();
+            cout<<endl<<"Enter the OOP:";
+            cin>>sub1;
+            cout<<endl<<"Enter the WEB:";
+            cin>>sub2;
+            cout<<endl<<"Enter the GC:";
+            cin>>sub3;
+        }
+    void output()
+    { 
+        cout<<endl<<"Student Details:";
+        cout<<endl<<"...............................";
+        putdata();
+        cout<<endl<<"OOPS Marks:"<<sub1;
+        cout<<endl<<"WEB Marks:"<<sub2;
+        cout<<endl<<"GC Marks:"<<sub3;
+    }
+    void calculate()
+    { 
+        per=(sub1+sub2+sub3)/3;
+        cout<<endl<<"Total percentage:"<<per<<endl;
+        if(per>=85)
+        cout<<endl<<"Grade A+";
+        else if(per>=60)
+        cout<<endl<<"Grade A";
+        else if(per>=50)
+        cout<<endl<<"Grade B";
+        else if ( per>=45)
+        cout<<endl<<"Grade C";
+        cout<<endl;
+        if(sub1<34||sub2<34||sub3<34)
+        {
+        cout<<"You are failed"<<endl;
+        cout<<"You have to pay Rs 199"<<endl;
+        }
+        
+      
+        
+    }
+};
+class SYIT: public Student
+{ 
+    int sub1;
+    int sub2;
+    int sub3;
+    float per;
+    public:
+        void inputdata()
+        { 
+            getdata();
+            cout<<endl<<"Enter the DBMS:";
+            cin>>sub1;
+            cout<<endl<<"Enter the Computer Architecture:";
+            cin>>sub2;
+            cout<<endl<<"Enter the CS:";
+            cin>>sub3;
+        }
+    void outputdata()
+    { 
+        cout<<endl<<"Student Details:";
+        cout<<endl<<"............................";
+        putdata();
+        cout<<endl<<"DBMS Marks:"<<sub1;
+        cout<<endl<<"Computer Architecture Marks:"<<sub2;
+        cout<<endl<<"CS Marks:"<<sub3;
+    }
+    void calculatedata()
+    { 
+        per=(sub1+sub2+sub3)/3;
+        cout<<endl<<"Total percentage:"<<per<<endl;
+        if(per>=85)
+        cout<<endl<<"Grade A+";
+        else if(per>=60)
+        cout<<endl<<"Grade A";
+        else if(per>=50)
+        cout<<endl<<"Grade B";
+        else if ( per>=45)
+        cout<<endl<<"Grade C";
+        cout<<endl;
+         if(sub1<34||sub2<34||sub3<34)
+        {
+        cout<<"You are failed"<<endl;
+        cout<<"You have to pay Rs 299"<<endl;
+        }    
+    }
+};
+
+class TYIT: public Student
+{ 
+    int sub1;
+    int sub2;
+    int sub3;
+    float per;
+    public:
+        void getinput()
+        { 
+            getdata();
+            cout<<endl<<"Enter the Python:";
+            cin>>sub1;
+            cout<<endl<<"Enter the Java:";
+            cin>>sub2;
+            cout<<endl<<"Enter the Figma:";
+            cin>>sub3;
+        }
+    void getoutput()
+    { 
+        cout<<endl<<"Student Details:";
+        cout<<endl<<"............................";
+        putdata();
+        cout<<endl<<"Python Marks:"<<sub1;
+        cout<<endl<<"Java Marks:"<<sub2;
+        cout<<endl<<"Figma Marks:"<<sub3;
+    }
+    void getcalculate()
+    { 
+        per=(sub1+sub2+sub3)/3;
+        cout<<endl<<"Total percentage:"<<per<<endl;
+        if(per>=85)
+        cout<<endl<<"Grade A+";
+        else if(per>=60)
+        cout<<endl<<"Grade A";
+        else if(per>=50)
+        cout<<endl<<"Grade B";
+        else if ( per>=45)
+        cout<<endl<<"Grade C";
+        cout<<endl;
+         if(sub1<34||sub2<34||sub3<34)
+        {
+        cout<<"You are failed"<<endl;
+        cout<<"You have to pay Rs 399"<<endl;
+        }    
+    }
+};
+
+int main()
+{ 
+int i;
+cout<<"___^.^SRK University___^.^"<<endl;
+cout<<"........................................"<<endl;
+cout<<"____Results of FYIT___"<<endl;
+cout<<"......................................."<<endl;
+FYIT m;
+m.input();
+m.output();
+m.calculate();
+cout<<endl<<"..................................................";
+cout<<endl<<"____Results of SYIT____"<<endl;
+cout<<"...................."<<endl;
+SYIT  s;
+s.inputdata();
+s.outputdata();
+s.calculatedata();
+cout<<endl<<"..................................................";
+cout<<endl<<"____Results of TYIT____"<<endl;
+cout<<"...................."<<endl;
+TYIT  t;
+t.getinput();
+t.getoutput();
+t.getcalculate();
+cout<<"__^.^ THANK YOU ^.^__";
+return 0;
+}
